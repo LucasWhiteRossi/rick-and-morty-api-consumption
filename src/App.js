@@ -3,6 +3,7 @@ import {Home} from './pages/Home'
 import {Characters} from './pages/Characters'
 import {Locations} from './pages/Locations'
 import {Episodes} from './pages/Episodes'
+import {ReadSelected} from './pages/ReadSelected'
 
 function App() {
   
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/characters" element={<Characters/>}/>
+          <Route path="/read-selected" element={<ReadSelected/>}/>
           <Route path="/locations" element={<Locations/>}/>
           <Route path="/episodes" element={<Episodes/>}/>
         </Routes>

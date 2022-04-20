@@ -9,6 +9,7 @@ export function Home() {
             <Link to="/characters"><li className='char'>Characters</li></Link>
             <Link to="/locations"><li className='loc'>Location</li></Link>
             <Link to="/episodes"><li className='epi'>Episodes</li></Link>
+            <Link to="/read-selected"><li className='sel'>Selecionados</li></Link>
         </ul>
         </div>
     );

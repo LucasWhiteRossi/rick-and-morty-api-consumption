@@ -1,5 +1,4 @@
 import axios from 'axios';
-import {Link} from 'react-router-dom'
 
 export function LocationCard (props){
 
@@ -21,7 +20,7 @@ export function LocationCard (props){
         <div className="card-body">
         <h5 className="card-title">{props.location.name}</h5>
         <p className="card-text">{`Este local é do tipo: ${props.location.type}`}</p>
-        <Link to={`/character/${props.location.id}`}><button type="button" class="btn btn-primary" onClick={handleClick}>Selecionar</button></Link>
+        <button type="button" class="btn btn-primary" onClick={handleClick}>Selecionar</button>
         </div>
     </div>
     </div>

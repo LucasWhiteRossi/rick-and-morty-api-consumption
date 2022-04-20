@@ -1,5 +1,4 @@
 import axios from 'axios';
-import {Link} from 'react-router-dom'
 
 export function EpisodeCard (props){
 
@@ -21,7 +20,7 @@ export function EpisodeCard (props){
         <div className="card-body">
         <h5 className="card-title">{props.episode.name}</h5>
         <p className="card-text">{`Este episódio foi criado em: ${props.episode.created}`}</p>
-        <Link to={`/character/${props.episode.id}`}><button type="button" class="btn btn-primary" onClick={handleClick}>Selecionar</button></Link>
+        <button type="button" class="btn btn-primary" onClick={handleClick}>Selecionar</button>
         </div>
     </div>
     </div>

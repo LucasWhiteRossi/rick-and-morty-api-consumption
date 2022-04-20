@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 import {Card} from '../../components/Card'
+import {HomeButton} from '../../components/HomeButton'
 import './style.modules.css'
 
 export function Characters() {
@@ -19,6 +20,7 @@ export function Characters() {
     console.log(characters)
     return ( 
         <div className='charPage'>
+        <HomeButton/>
         <h1 className='text'>Characters</h1>
         <div className="content-box">
         {
