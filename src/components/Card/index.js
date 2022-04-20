@@ -6,7 +6,9 @@ export function Card (props){
         
         axios.post(
             'https://ironrest.herokuapp.com/rickandmortyapi',
-            {nome:props.character.name,
+            {
+            image:props.character.image,
+            nome:props.character.name,
             species:props.character.species,
             access_time: `${new Date()}`
             })

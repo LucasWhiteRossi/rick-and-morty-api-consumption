@@ -1,0 +1,11 @@
+
+.read-selected{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background-color: rgb(0, 0, 0);
+    height: 1000px;
+}
+.read-page{
+    background-color: rgb(0, 0, 0);
+}

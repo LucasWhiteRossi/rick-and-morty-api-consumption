@@ -17,10 +17,10 @@ export function Locations() {
         }
         fetchLocation()
         console.log(locations)
-    },[])
+    },[locations])
     
     return ( 
-        <>
+        <div className='locPage'>
         < HomeButton />
         <h1 style={{textAlign:"center"}}>Locations</h1>
         <div className="content-box">
@@ -33,7 +33,7 @@ export function Locations() {
             })
         }
         </div>
-        </>
+        </div>
     );
 }
 

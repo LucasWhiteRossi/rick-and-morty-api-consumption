@@ -16,3 +16,24 @@
 .card{
     margin-left: 10px;
 }
+.navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.sel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;
+    list-style: none;
+    text-decoration: none;
+    border: 2px solid rgb(5, 66, 41);
+    height: 50px;
+    width: 150px;
+    color: rgb(5, 66, 41);
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(8, 204, 106);
+}

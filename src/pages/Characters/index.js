@@ -3,6 +3,7 @@ import axios from 'axios';
 import {Card} from '../../components/Card'
 import {HomeButton} from '../../components/HomeButton'
 import './style.modules.css'
+import {Link} from "react-router-dom"
 
 export function Characters() {
     
@@ -16,11 +17,14 @@ export function Characters() {
         }
         fetchCharacters()
         
-    },[])
+    },[characters])
     console.log(characters)
     return ( 
         <div className='charPage'>
-        <HomeButton/>
+        <div className="navBar">
+        <HomeButton/> 
+        <Link to="/read-selected" style={{textDecoration: "none"}}><button className='sel'>Selecionados</button></Link>
+        </div>
         <h1 className='text'>Characters</h1>
         <div className="content-box">
         {

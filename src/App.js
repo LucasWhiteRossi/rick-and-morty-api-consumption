@@ -4,6 +4,7 @@ import {Characters} from './pages/Characters'
 import {Locations} from './pages/Locations'
 import {Episodes} from './pages/Episodes'
 import {ReadSelected} from './pages/ReadSelected'
+import {UpdateSelected} from './pages/UpdateSelected'
 
 function App() {
   
@@ -16,6 +17,7 @@ function App() {
           <Route path="/read-selected" element={<ReadSelected/>}/>
           <Route path="/locations" element={<Locations/>}/>
           <Route path="/episodes" element={<Episodes/>}/>
+          <Route path="/character/:selected_id" element={<UpdateSelected/>}/>
         </Routes>
       </BrowserRouter>
         

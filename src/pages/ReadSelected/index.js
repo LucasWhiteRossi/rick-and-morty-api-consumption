@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react'
 import { HomeButton } from '../../components/HomeButton'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import "./style.modules.css"
 export function ReadSelected(){
     
     const [data, setData] = useState([])
@@ -24,22 +25,31 @@ export function ReadSelected(){
     }
 
     return (
-        <>
+        <div className="read-page">
         <HomeButton/>
+        <div className="read-selected">
+        
         {
             data.map((currentData)=>{
                 return (
-                    <div>
+                    <div className="card text-white bg-dark mb-3" style={{maxWidth: "400px", maxHeight: "400px"}}>
+                        <div className="row g-0">
+                            <div className="col-md-4">
+                                <img src={currentData.image} className="img-fluid rounded-start" alt={currentData.name}/>
+                            </div>
+                        </div>
                         <p>ID: {currentData._id}</p>
-                        <p><strong>Nome: </strong>{currentData.nome}</p>
-                        <p>Selecionado em: {currentData.access_time}</p>
-                        { currentData.species && <p>{currentData.species}</p>}
+                        <h5 className="card-title"><strong>Nome: </strong>{currentData.nome}</h5>
+                        <p className="card-text">Selecionado em: {currentData.access_time}</p>
+                        { currentData.species && <p className="card-text"><strong>Espécie: </strong>{currentData.species}</p>}
+                        { currentData.informacao && <p className="card-text"><strong>Comentário: </strong>{currentData.informacao}</p>}
                         <Link to = {`/character/${currentData._id}`}><button>Atualizar</button></Link><button onClick={()=>{deleteRegister(currentData._id)}}>Deletar</button>
                     </div>
                 );
             })
         }
-        </>
+        </div>
+        </div>
     );
 
 }

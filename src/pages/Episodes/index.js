@@ -17,10 +17,10 @@ export function Episodes() {
         }
         fetchEpisode()
         console.log(episodes)
-    },[])
+    },[episodes])
     
     return ( 
-        <>
+        <div className='epPage'>
         < HomeButton />
         <h1 style={{textAlign:"center"}}>Episodes</h1>
         <div className="content-box">
@@ -33,7 +33,7 @@ export function Episodes() {
             })
         }
         </div>
-        </>
+        </div>
     );
 }
 
